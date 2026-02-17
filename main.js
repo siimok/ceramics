@@ -26,6 +26,8 @@ function createCarousel(dataObj, prefix) {
     const prevBtn = document.getElementById(`${prefix}-prev`);
     const nextBtn = document.getElementById(`${prefix}-next`);
 
+    if(!prevBtn) return;
+
     // Images (assume always 3 visible)
     const images = [
         document.getElementById(`${prefix}-image-1`),
@@ -61,10 +63,79 @@ function fitInRange(num, max) {
     return ((num % size) + size) % size;
 }
 
-function setImages(imgEl, productKey) {
-    imgEl.src = Products[productKey];
-    imgEl.alt = productKey;
-}
-
 createCarousel(Products, "products");
 createCarousel(Finished, "finished");
+
+
+function createSlideshow(containerId, slidesData) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const slidesWrapper = container.querySelector('.slides');
+    const arrowLeft = container.querySelector('#slideshow-prev');
+    const arrowRight = container.querySelector('#slideshow-next');
+
+    // Insert dynamic slides after the hard-coded first slide
+    slidesData.forEach(item => {
+        const slide = document.createElement('div');
+        slide.classList.add('slide');
+
+        const img = document.createElement('img');
+        img.src = item.imageUrl;
+        img.alt = item.title;
+
+        const title = document.createElement('div');
+        title.classList.add('slide-title');
+        title.textContent = item.title;
+
+        slide.appendChild(img);
+        slide.appendChild(title);
+
+        slidesWrapper.appendChild(slide);
+    });
+
+    // Select all slides
+    const slides = slidesWrapper.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'flex' : 'none';
+        });
+    }
+
+    // Initial display
+    showSlide(currentIndex);
+
+    // Arrow navigation
+    arrowLeft.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    });
+
+    arrowRight.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    });
+}
+
+createSlideshow("product-slideshow", [
+    { title: "City at Night", imageUrl: "https://picsum.photos/id/1015/600/400" },
+    { title: "Mountain View", imageUrl: "https://picsum.photos/id/1016/600/400" }
+]);
+
+
+/*Mobile menu toggle*/
+
+let mobileMenuOpen = false;
+
+function toggleMobileMenu() {
+    mobileMenuOpen = !mobileMenuOpen;
+    const mobileMenuDiv = document.getElementById(`mobile-menu`);
+    mobileMenuDiv.style.display = mobileMenuOpen ? "flex" : "none";
+}
+
+const hamburgerButton = document.getElementById(`hamburger-button`);
+
+hamburgerButton.addEventListener("click", () => {
+    toggleMobileMenu();
+});

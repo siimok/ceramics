@@ -76,13 +76,25 @@ nav a:hover {
 
 /* Main content styling */
 .main-content {
-    min-height: 80vh; /* Ensure content fills most of the screen */
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 148px);
+}
+
+@media screen and (max-width: 600px) {
+    .main-content {
+        min-height: calc(100vh - 180px);
+    }
 }
 
 .hide-mobile {
     @media screen and (max-width: 999px) {
+        display: none !important;
+    }
+}
+
+.hide-desktop {
+    @media screen and (min-width: 1000px) {
         display: none !important;
     }
 }
@@ -212,6 +224,10 @@ section {
     }
 }
 
+.text-center {
+    text-align: center;
+}
+
 .content-section {
     margin-top: 2rem;
 }
@@ -237,11 +253,38 @@ section {
     text-decoration: underline;
 }
 
+/* Mobile header */
+
+#hamburger-button {
+    height: 40px;
+    width: 40px;
+    padding: 3px;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+#mobile-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    background-color: #f1e6e6;
+    border: 1px solid black;
+    top: 60px;
+    right: 0;
+    width: 150px;
+    padding: 0.75rem;
+}
+
+#mobile-menu > a{
+    height: 2rem;
+}
+
 /*Footer*/
 
 footer {
     margin-top: 2rem;
     background-color: #fefefe;
+    padding: 0 2rem;
 }
 
 footer > div {
@@ -249,9 +292,19 @@ footer > div {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 600px) {
+
+    footer > div {
+        flex-direction: column;
+    }
+
+    footer > div > p {
+        margin: 8px 0
+    }
+}
+
 /*Hero section specific styles*/
 .hero-row {
-
     flex-direction: row;
 
     @media screen and (max-width: 1000px) {
@@ -357,4 +410,50 @@ footer > div {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.slide {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.slide > img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.slide-title {
+
+}
+
+.slideshow-controls {
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+
+/* Contact page CSS */
+
+.contact-iframe {
+    max-width: 100%;
+    width: 800px;
+    height: 600px;
+
+    @media screen and (max-width: 1000px) {
+        height: 400px;
+    }
+}
+
+.contact-row {
+    gap: 10px;
+    padding-top: 2rem;
+    @media screen and (min-width: 1000px) {
+        padding-left: 10rem;
+    }
+}
+
+.contact-icon {
+    margin-bottom: -6px;
 }

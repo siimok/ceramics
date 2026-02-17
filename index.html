@@ -19,6 +19,23 @@
         <a href="/galerii">Galerii</a>
         <a href="/kontakt">Kontakt</a>
     </div>
+    <div class="container hide-desktop">
+        <button id="hamburger-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30" height="30" role="img" aria-hidden="true">
+                <title>Menu</title>
+                <rect x="8" y="12" width="32" height="4" rx="2"/>
+                <rect x="8" y="22" width="32" height="4" rx="2"/>
+                <rect x="8" y="32" width="32" height="4" rx="2"/>
+            </svg>
+        </button>
+        <div id="mobile-menu" class="hide-desktop">
+            <a class="active-link" href="/">Avaleht</a>
+            <a href="/tooted">Tooted</a>
+            <a href="/hinnakiri">Hinnakiri</a>
+            <a href="/gallery">Galerii</a>
+            <a href="/kontakt">Kontakt</a>
+        </div>
+    </div>
 </nav>
 
 <div class="main-content">
@@ -35,8 +52,8 @@
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <div class="hero-buttons">
-                        <a class="hero-button">Galerii</a>
-                        <a class="hero-button">Hinnakiri</a>
+                        <a class="hero-button" href="/hinnakiri">Hinnakiri</a>
+                        <a class="hero-button" href="/gallery">Galerii</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5 hide-mobile">
@@ -157,12 +174,13 @@
                 </div>
                 <div class="col-2 col-lg-1 arrow-col">
                     <button id="finished-next" class="arrow-button">
-                        <img class="arrow-right" src="/chevron.svg" alt="scroll carousel to right"></button>
+                        <img class="arrow-right" src="/chevron.svg" alt="scroll carousel to right">
+                    </button>
                 </div>
             </div>
             <div class="cta-row">
                 <h3 class="cta-text">Meie partnerite poolt tehtud tööd leiate</h3>
-                <a class="hero-button" href="/tooted">Galerii</a>
+                <a class="hero-button" href="/gallery">Galerii</a>
             </div>
         </section>
     </div>
