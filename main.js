@@ -1,20 +1,20 @@
 
 const Products = {
-    "Kantkoba": "/ceramics/public/products/kantkoba.png",
-    "Kulg": "/ceramics/public/products/kulg.png",
-    "Ümarnurk": "/ceramics/public/products/umarnurk.png",
-    "Kantnurk": "/ceramics/public/products/kantnurk.png",
-    "Karniis": "/ceramics/public/products/karniis.png",
-    "Keraamiline tahmatops": "/ceramics/public/products/keraamiline-tahmatops.jpg",
-    "Sokkel": "/ceramics/public/products/sokkel.png",
+    "Kantkoba": "/public/products/kantkoba.png",
+    "Kulg": "/public/products/kulg.png",
+    "Ümarnurk": "/public/products/umarnurk.png",
+    "Kantnurk": "/public/products/kantnurk.png",
+    "Karniis": "/public/products/karniis.png",
+    "Keraamiline tahmatops": "/public/products/keraamiline-tahmatops.jpg",
+    "Sokkel": "/public/products/sokkel.png",
 };
 
 const Finished = {
-    "Lihtpotist ahi 1": "/ceramics/public/finished/lihv-ahi.jpg",
-    "Lihtpotist ahi 2": "/ceramics/public/finished/lihv-ahi2.jpg",
-    "Valgest glasuurahjupotist ahi 1": "/ceramics/public/finished/valge-ahi.jpg",
-    "Valgest glasuurahjupotist ahi 2": "/ceramics/public/finished/valge-ahi-2.jpg",
-    "Valgest glasuurahjupotist pliit": "/ceramics/public/finished/valge-pliit.jpg",
+    "Lihtpotist ahi 1": "/public/finished/lihv-ahi.jpg",
+    "Lihtpotist ahi 2": "/public/finished/lihv-ahi2.jpg",
+    "Valgest glasuurahjupotist ahi 1": "/public/finished/valge-ahi.jpg",
+    "Valgest glasuurahjupotist ahi 2": "/public/finished/valge-ahi-2.jpg",
+    "Valgest glasuurahjupotist pliit": "/public/finished/valge-pliit.jpg",
 }
 
 function createCarousel(dataObj, prefix) {
