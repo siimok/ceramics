@@ -10,10 +10,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                galerii: resolve(__dirname, 'galerii.html'),
-                hinnakiri: resolve(__dirname, 'hinnakiri.html'),
-                kontakt: resolve(__dirname, 'kontakt.html'),
-                tooted: resolve(__dirname, 'tooted.html'),
+                galerii: resolve(__dirname, 'ceramics/galerii.html'),
+                hinnakiri: resolve(__dirname, 'ceramics/hinnakiri.html'),
+                kontakt: resolve(__dirname, 'ceramics/kontakt.html'),
+                tooted: resolve(__dirname, 'ceramics/tooted.html'),
             },
         },
     },
