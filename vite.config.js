@@ -5,17 +5,16 @@ import { defineConfig } from 'vite'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-    base: '/ceramics/',
+    base: '/ceramics/',   // only if deploying to domain.com/ceramics/
     build: {
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                galerii: resolve(__dirname, 'ceramics/galerii.html'),
-                hinnakiri: resolve(__dirname, 'ceramics/hinnakiri.html'),
-                kontakt: resolve(__dirname, 'ceramics/kontakt.html'),
-                tooted: resolve(__dirname, 'ceramics/tooted.html'),
+                galerii: resolve(__dirname, 'galerii.html'),
+                hinnakiri: resolve(__dirname, 'hinnakiri.html'),
+                kontakt: resolve(__dirname, 'kontakt.html'),
+                tooted: resolve(__dirname, 'tooted.html'),
             },
         },
     },
-    assetsInclude: ['finished/*.jpg', 'product/**/*'],
 })
