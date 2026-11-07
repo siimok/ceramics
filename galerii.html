@@ -5,41 +5,11 @@
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Galerii: Ahjupotitööstus OÜ pottidest ehitatud ahjud, kaminad ja pliidid."/>
     <title>Galerii | Ahjupotitööstus OÜ</title>
 </head>
 <body>
-<nav>
-    <div class="container hide-mobile d-lg-block">
-        <a href="./index.html">
-            <div class="logo">Ahjupotitööstus OÜ</div>
-        </a>
-        <a href="./index.html">Avaleht</a>
-        <a href="./tooted.html">Tooted</a>
-        <a href="./hinnakiri.html">Hinnakiri</a>
-        <a class="active-link" href="./galerii.html">Galerii</a>
-        <a href="./meist.html">Meist</a>
-        <a href="./kontakt.html">Kontakt</a>
-    </div>
-
-    <div class="container hide-desktop">
-        <button id="hamburger-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30" height="30" role="img" aria-hidden="true">
-                <title>Menu</title>
-                <rect x="8" y="12" width="32" height="4" rx="2"/>
-                <rect x="8" y="22" width="32" height="4" rx="2"/>
-                <rect x="8" y="32" width="32" height="4" rx="2"/>
-            </svg>
-        </button>
-        <div id="mobile-menu" class="hide-desktop">
-            <a href="./index.html">Avaleht</a>
-            <a href="./tooted.html">Tooted</a>
-            <a href="./hinnakiri.html">Hinnakiri</a>
-            <a class="active-link" href="./galerii.html">Galerii</a>
-            <a href="./meist.html">Meist</a>
-            <a href="./kontakt.html">Kontakt</a>
-        </div>
-    </div>
-</nav>
+<!-- site-nav -->
 
 <div class="main-content">
     <div class="container">
@@ -52,7 +22,8 @@
             <div id="glazed-slideshow" class="slideshow-container">
                 <div class="slides">
                     <div class="slide" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-                        <img src="/glazed/20.jpg" alt="Glasuurpott ahi">
+                        <img loading="lazy" src="/glazed/40.jpg" alt="Glasuurpottidest ahi. Projekteerinud M. Ollino, pottsepp V. Kolla.">
+                        <div class="slide-title">Projekteerinud M. Ollino, pottsepp V. Kolla.</div>
                     </div>
                 </div>
                 <div class="slideshow-controls">
@@ -70,13 +41,14 @@
         <section class="content-section">
             <div class="row">
                 <div class="col-12 ">
-                    <h1>Kaminad</h1>
+                    <h1>Lihtpott ahjud</h1>
                 </div>
             </div>
             <div id="unglazed-slideshow" class="slideshow-container">
                 <div class="slides">
                     <div class="slide" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-                        <img src="/unglazed/L9.jpg" alt="Kamin">
+                        <img loading="lazy" src="/unglazed/L1.jpg" alt="Lihtpottidest ahi. Pottsepp M. Väljamäe.">
+                        <div class="slide-title">Pottsepp M. Väljamäe.</div>
                     </div>
                 </div>
                 <div class="slideshow-controls">
@@ -100,7 +72,8 @@
             <div id="stove-slideshow" class="slideshow-container">
                 <div class="slides">
                     <div class="slide" style="display:flex; flex-direction:column; align-items:center; text-align:center;">
-                        <img src="/stove/PL10.jpg" alt="Ahjupottidest pliit">
+                        <img loading="lazy" src="/stove/PL15.jpg" alt="Ahjupottidest pliit. Projekteerinud M. Ollino, pottsepp V. Kolla.">
+                        <div class="slide-title">Projekteerinud M. Ollino, pottsepp V. Kolla.</div>
                     </div>
                 </div>
                 <div class="slideshow-controls">
@@ -117,13 +90,7 @@
     </div>
 </div>
 
-<footer>
-    <div class="container">
-        <p>© 2026 OÜ Ahjupotitööstus</p>
-        <p>info@ahjupotitoostus.ee</p>
-        <p>Registrikood: 10836981</p>
-    </div>
-</footer>
+<!-- site-footer -->
 <script type="module" src="main.js"></script>
 </body>
 </html>
