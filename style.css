@@ -20,14 +20,15 @@ body {
 
 /* Reusable container class */
 .container {
+    box-sizing: border-box; /* padding stays inside the 100% width */
     max-width: 1200px;
     width: 100%;
     padding: 0;
     margin: 0 auto;
 
-    @media screen (min-width: 1000 px) {
-    padding: 0 1rem;
-}
+    @media screen and (min-width: 1000px) {
+        padding: 0 1rem;
+    }
 }
 
 /* Navbar styling */
@@ -105,9 +106,9 @@ h1 {
     margin-bottom: 1rem;
     text-align: center;
 
-    @media screen (min-width: 1000 px) {
-    font-size: 3rem;
-}
+    @media screen and (min-width: 1000px) {
+        font-size: 3rem;
+    }
 }
 
 h2 {
@@ -423,6 +424,10 @@ footer > div {
     margin: 0 auto;
 }
 
+.slides {
+    touch-action: pan-y; /* horizontal swipes go to the slideshow */
+}
+
 .slide > img {
     flex: 1;
     width: 100%;
@@ -468,37 +473,26 @@ footer > div {
 
 .pdf-table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-.pdf-table-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid #e0e0e0;
-}
-.pdf-table-row:last-child {
-    border-bottom: none;
+.pdf-table th,
+.pdf-table td {
+    width: 50%;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
 }
 
-.pdf-table-header .pdf-table-cell {
+.pdf-table th {
     font-size: 18px;
     font-weight: 500;
 }
 
-.pdf-table-cell {
-    padding: 10px 12px;
+.pdf-table tr {
+    border-bottom: 1px solid #e0e0e0;
 }
 
-@media (max-width: 600px) {
-    .pdf-table-header {
-        display: none;
-    }
-    .pdf-table-row {
-        grid-template-columns: 1fr;
-    }
-    .pdf-table-cell:first-child {
-        padding-bottom: 4px;
-    }
-    .pdf-table-cell:last-child {
-        padding-top: 4px;
-    }
+.pdf-table tbody tr:last-child {
+    border-bottom: none;
 }

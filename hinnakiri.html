@@ -1,44 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.png"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css">
-    <title>Ahjupotitööstuse OÜ hinnakiri</title>
+    <meta name="description" content="Ahjupotitööstus OÜ glasuur- ja lihtahjupottide ning täitekivide hinnakiri."/>
+    <title>Hinnakiri | Ahjupotitööstus OÜ</title>
 </head>
 <body>
-<nav>
-    <div class="container hide-mobile d-lg-block">
-        <a href="./index.html">
-            <div class="logo">Ahjupotitööstus OÜ</div>
-        </a>
-        <a href="./index.html">Avaleht</a>
-        <a href="./tooted.html">Tooted</a>
-        <a class="active-link" href="./hinnakiri.html">Hinnakiri</a>
-        <a href="./galerii.html">Galerii</a>
-        <a href="./meist.html">Meist</a>
-        <a href="./kontakt.html">Kontakt</a>
-    </div>
-    <div class="container hide-desktop">
-        <button id="hamburger-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30" height="30" role="img" aria-hidden="true">
-                <title>Menu</title>
-                <rect x="8" y="12" width="32" height="4" rx="2"/>
-                <rect x="8" y="22" width="32" height="4" rx="2"/>
-                <rect x="8" y="32" width="32" height="4" rx="2"/>
-            </svg>
-        </button>
-        <div id="mobile-menu" class="hide-desktop">
-            <a href="./index.html">Avaleht</a>
-            <a href="./tooted.html">Tooted</a>
-            <a class="active-link" href="./hinnakiri.html">Hinnakiri</a>
-            <a href="./galerii.html">Galerii</a>
-            <a href="./meist.html">Meist</a>
-            <a href="./kontakt.html">Kontakt</a>
-        </div>
-    </div>
-</nav>
+<!-- site-nav -->
 
 <div class="main-content">
     <div class="container">
@@ -46,11 +17,15 @@
             <div class="row">
                 <div class="col-12 ">
                     <h1>Hinnakiri</h1>
+                    <p>
+                        <a class="hero-button" href="%BASE_URL%hinnakiri.pdf" download>Laadi hinnakiri alla (PDF)</a>
+                    </p>
                     <iframe
-                        src="/ceramics/hinnakiri.pdf"
+                        src="%BASE_URL%hinnakiri.pdf"
                         width="100%"
                         height="1000px"
-                        style="border:none;">
+                        style="border:none;"
+                        title="Hinnakiri">
                     </iframe>
                 </div>
             </div>
@@ -58,13 +33,7 @@
     </div>
 </div>
 
-<footer>
-    <div class="container">
-        <p>© 2026 OÜ Ahjupotitööstus</p>
-        <p>info@ahjupotitoostus.ee</p>
-        <p>Registrikood: 10836981</p>
-    </div>
-</footer>
+<!-- site-footer -->
 <script type="module" src="main.js"></script>
 </body>
 </html>
