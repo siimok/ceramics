@@ -25,7 +25,7 @@ body {
     padding: 0;
     margin: 0 auto;
 
-    @media screen (min-width: 1000 px) {
+    @media screen and (min-width: 1000px) {
     padding: 0 1rem;
 }
 }
@@ -105,7 +105,7 @@ h1 {
     margin-bottom: 1rem;
     text-align: center;
 
-    @media screen (min-width: 1000 px) {
+    @media screen and (min-width: 1000px) {
     font-size: 3rem;
 }
 }

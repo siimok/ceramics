@@ -165,7 +165,6 @@ createSlideshow("glazed-slideshow", [
     { title: "", imageUrl: "/ceramics/glazed/16.jpg" },
     { title: "", imageUrl: "/ceramics/glazed/18.jpg" },
     { title: "", imageUrl: "/ceramics/glazed/19.jpg" },
-    { title: "", imageUrl: "/ceramics/glazed/20.jpg" },
     { title: "", imageUrl: "/ceramics/glazed/21.jpg" },
     { title: "", imageUrl: "/ceramics/glazed/27.jpg" },
     { title: "", imageUrl: "/ceramics/glazed/40.jpg" },
@@ -183,7 +182,6 @@ createSlideshow("unglazed-slideshow", [
     { title: "", imageUrl: "/ceramics/unglazed/L6.jpg" },
     { title: "", imageUrl: "/ceramics/unglazed/L7.jpg" },
     { title: "", imageUrl: "/ceramics/unglazed/L8.jpg" },
-    { title: "", imageUrl: "/ceramics/unglazed/L9.jpg" },
     { title: "", imageUrl: "/ceramics/unglazed/L10.jpg" },
 ]);
 
@@ -191,7 +189,6 @@ createSlideshow("stove-slideshow", [
     { title: "", imageUrl: "/ceramics/stove/PL2.jpg" },
     { title: "", imageUrl: "/ceramics/stove/PL7.jpg" },
     { title: "", imageUrl: "/ceramics/stove/PL8.jpg" },
-    { title: "", imageUrl: "/ceramics/stove/PL10.jpg" },
     { title: "", imageUrl: "/ceramics/stove/PL11.jpg" },
     { title: "", imageUrl: "/ceramics/stove/PL12.jpg" },
     { title: "", imageUrl: "/ceramics/stove/PL15.jpg" },

@@ -13,6 +13,7 @@ export default defineConfig({
                 galerii: resolve(__dirname, 'galerii.html'),
                 hinnakiri: resolve(__dirname, 'hinnakiri.html'),
                 kontakt: resolve(__dirname, 'kontakt.html'),
+                meist: resolve(__dirname, 'meist.html'),
                 tooted: resolve(__dirname, 'tooted.html'),
             },
         },
