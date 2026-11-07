@@ -81,7 +81,9 @@ function siteLayout() {
 }
 
 export default defineConfig({
-    base: '/ceramics/',   // only if deploying to domain.com/ceramics/
+    // Production is served from the domain root. The GitHub Pages review build
+    // sets BASE_PATH=/ceramics/ (see .github/workflows/deploy.yaml).
+    base: process.env.BASE_PATH || '/',
     plugins: [siteLayout()],
     build: {
         rollupOptions: {
