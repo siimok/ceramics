@@ -20,14 +20,15 @@ body {
 
 /* Reusable container class */
 .container {
+    box-sizing: border-box; /* padding stays inside the 100% width */
     max-width: 1200px;
     width: 100%;
     padding: 0;
     margin: 0 auto;
 
     @media screen and (min-width: 1000px) {
-    padding: 0 1rem;
-}
+        padding: 0 1rem;
+    }
 }
 
 /* Navbar styling */
