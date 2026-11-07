@@ -101,11 +101,7 @@ function createSlideshow(containerId, altPrefix, slidesData) {
     const slides = slidesWrapper.querySelectorAll('.slide');
     let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'flex' : 'none';
-        });
-        // Load image only when shown
+    function loadImage(index) {
         const img = slides[index].querySelector('img');
         if (img && img.dataset.src) {
             img.src = img.dataset.src;
@@ -113,18 +109,43 @@ function createSlideshow(containerId, altPrefix, slidesData) {
         }
     }
 
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'flex' : 'none';
+        });
+        // Load the shown image, plus its neighbours so the next click is instant
+        loadImage(index);
+        loadImage(fitInRange(index + 1, slides.length - 1));
+        loadImage(fitInRange(index - 1, slides.length - 1));
+    }
+
+    function go(step) {
+        currentIndex = fitInRange(currentIndex + step, slides.length - 1);
+        showSlide(currentIndex);
+    }
+
     // Initial display
     showSlide(currentIndex);
 
     // Arrow navigation
-    arrowLeft.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-    });
+    arrowLeft.addEventListener('click', () => go(-1));
+    arrowRight.addEventListener('click', () => go(1));
 
-    arrowRight.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+    // Swipe navigation on touch screens
+    let touchStartX = null;
+    let touchStartY = null;
+    slidesWrapper.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].clientX;
+        touchStartY = event.changedTouches[0].clientY;
+    }, { passive: true });
+    slidesWrapper.addEventListener('touchend', (event) => {
+        if (touchStartX === null) return;
+        const dx = event.changedTouches[0].clientX - touchStartX;
+        const dy = event.changedTouches[0].clientY - touchStartY;
+        touchStartX = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+            go(dx < 0 ? 1 : -1);
+        }
     });
 }
 
